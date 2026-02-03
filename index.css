@@ -1,0 +1,32 @@
+body {
+    margin: 0;
+    background-color: rgb(112, 112, 112);
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    background-color: #1B244A;
+}
+
+#home, #guest {
+    color: rgb(221, 221, 221);
+}
+
+@font-face {
+    font-family: "CursedTimer";
+    src: url("fonts/CursedTimerUlil-Aznm.ttf") format("truetype");
+}
+
+.scoreDigit {
+    color: #F94F6D;
+    text-align: center;
+    font-family: "CursedTimer";
+    margin: 0;
+}
+
+.scoreDigitSquare {
+    background-color: black;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
