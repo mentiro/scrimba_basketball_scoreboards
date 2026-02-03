@@ -7,10 +7,19 @@ body {
     display: flex;
     justify-content: space-around;
     background-color: #1B244A;
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 50px;
+    padding-bottom: 30px;
+    padding-top: 10px;
+    border: 2px solid black;
+    border-radius: 15px;
 }
 
 #home, #guest {
     color: rgb(221, 221, 221);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
 }
 
 @font-face {
@@ -23,10 +32,30 @@ body {
     text-align: center;
     font-family: "CursedTimer";
     margin: 0;
+    font-size: 2.5rem;
 }
 
 .scoreDigitSquare {
     background-color: black;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.plusPlus {
+    display: inline-block;
+    margin: 0;
+    padding: 5px;
+    color: rgb(221, 221, 221);
+    font-family: "CursedTimer";
+    border: 1px solid rgb(221, 221, 221);
+    border-radius: 5px;
+    line-height: 1;
+    opacity: 0.5;
+}
+
+/* removing the default margins of p so it does not affect other css rules */
+.plusPlus p {
+    margin: 0;
 }
