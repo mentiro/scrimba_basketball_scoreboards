@@ -6,7 +6,7 @@ body {
 .container {
     display: flex;
     justify-content: space-around;
-    background-color: #1B244A;
+    background-color: #264b87; /* Color updated compared to the Figma design */
     width: 300px;
     margin: 0 auto;
     margin-top: 50px;
@@ -20,6 +20,7 @@ body {
     color: rgb(221, 221, 221);
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     text-align: center;
+    font-size: 1.7rem;
 }
 
 @font-face {
@@ -36,7 +37,7 @@ body {
 }
 
 .scoreDigitSquare {
-    background-color: black;
+    background-color: rgb(26, 26, 26); /* Color updated compared to the Figma design */
     padding-top: 15px;
     padding-bottom: 15px;
     border-radius: 10px;
