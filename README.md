@@ -6,7 +6,7 @@
 ### Additional requirements
 - Add a "New Game" button
 - Highlight the leader
-- Addd a few more counters (period, fouls, timer)
+- Add a few more counters (period, fouls, timer)
 - Change the design (maybe)
 
 ### Links
