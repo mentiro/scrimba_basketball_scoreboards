@@ -5,15 +5,86 @@ body {
 
 .container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     background-color: #264b87; /* Color updated compared to the Figma design */
     width: 300px;
     margin: 0 auto;
     margin-top: 50px;
-    padding-bottom: 30px;
+    padding-bottom: 20px;
     padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
     border: 3px solid black;
     border-radius: 15px;
+}
+
+.topRow {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.boardDivider {
+    width: 90%;
+    height: 2px;
+    background-image: linear-gradient(
+        to right,
+        transparent,
+        rgb(0, 0, 0),
+        transparent
+    );
+    margin: 6px auto 10px;
+}
+
+.middleRow {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+}
+
+.teamColumn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.verticalDivider {
+    width: 1px;
+    background-image: linear-gradient(
+        to bottom,
+        transparent,
+        rgb(0, 0, 0),
+        transparent
+    );
+    margin: 0 6px;
+}
+
+.bottomDivider {
+    margin: 16px auto 6px;
+}
+
+.topLabel {
+    color: rgb(221, 221, 221);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    font-size: 0.8rem;
+    letter-spacing: 0.04em;
+    margin-bottom: 4px;
+}
+
+.timerDisplay, .periodDisplay {
+    background-color: rgb(26, 26, 26);
+    color: #F94F6D;
+    font-family: "CursedTimer";
+    text-align: center;
+    border-radius: 8px;
+    padding: 6px 10px;
+    min-width: 70px;
+    font-size: 1.4rem;
 }
 
 #home, #guest {
@@ -21,6 +92,15 @@ body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     text-align: center;
     font-size: 1.7rem;
+    transition: text-shadow 0.2s ease-in-out;
+}
+
+#home.leader, #guest.leader {
+    text-shadow:
+    -1.5px -1.5px 0 rgba(255, 0, 0, 0.85),
+    1.5px -1.5px 0 rgba(255, 0, 0, 0.85),
+    -1.5px 1.5px 0 rgba(255, 0, 0, 0.85),
+    1.5px 1.5px 0 rgba(255, 0, 0, 0.85);
 }
 
 @font-face {
@@ -40,8 +120,68 @@ body {
     background-color: rgb(26, 26, 26); /* Color updated compared to the Figma design */
     padding-top: 15px;
     padding-bottom: 15px;
+    padding-left: 16px;
+    padding-right: 16px;
     border-radius: 10px;
     margin-bottom: 10px;
+}
+
+.scoreButtons {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+}
+
+.statsRow {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 30px;
+}
+
+.statBlock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.statLabel {
+    color: rgb(221, 221, 221);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    font-size: 0.7rem;
+    letter-spacing: 0.04em;
+}
+
+.statValue {
+    background-color: rgb(26, 26, 26);
+    color: #F94F6D;
+    font-family: "CursedTimer";
+    text-align: center;
+    border-radius: 6px;
+    padding: 4px 8px;
+    min-width: 40px;
+    font-size: 1rem;
+}
+
+.statButton {
+    display: inline-block;
+    padding: 4px 6px;
+    color: rgb(221, 221, 221);
+    font-family: "CursedTimer";
+    border: 1px solid rgb(221, 221, 221);
+    border-radius: 4px;
+    line-height: 1;
+    opacity: 0.7;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.statButton:hover {
+    background-color: rgb(221, 221, 221);
+    color: #264b87;
 }
 
 .plusPlus {
@@ -54,9 +194,52 @@ body {
     border-radius: 5px;
     line-height: 1;
     opacity: 0.6;
+    background-color: transparent;
+    cursor: pointer;
 }
 
 /* removing the default margins of p so it does not affect other css rules */
 .plusPlus p {
     margin: 0;
+}
+
+.plusPlus:hover {
+    background-color: rgb(221, 221, 221);
+}
+
+.plusPlus:hover p {
+    color: #264b87;
+}
+
+.newGameRow {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 16px;
+    margin-bottom: 1px;
+}
+
+.newGameButton {
+    display: inline-block;
+    padding: 8px 14px;
+    color: rgb(221, 221, 221);
+    font-family: "CursedTimer";
+    border: 1px solid rgb(221, 221, 221);
+    border-radius: 6px;
+    line-height: 1;
+    opacity: 0.8;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.controlButton {
+    min-width: 44px;
+    text-align: center;
+    font-family: "CursedTimer", sans-serif;
+}
+
+.newGameButton:hover {
+    background-color: rgb(221, 221, 221);
+    color: #264b87;
 }
